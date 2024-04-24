@@ -78,11 +78,11 @@ namespace LogogramHelper.Windows
             ImGui.EndGroup();
             var details = Action.Type.ToUpper();
             if (Action.Duration != null)
-                details += $" · DURATION: {Action.Duration}";
+                details += $" · 持续时间: {Action.Duration}";
             if (Action.Cast != null)
-                details += $" · CAST: {Action.Cast}";
+                details += $" · 咏唱时间: {Action.Cast}";
             if (Action.Recast != null)
-                details += $" · RECAST: {Action.Recast}";
+                details += $" · 复唱时间: {Action.Recast}";
             ImGui.TextColored(new Vector4(1.0f, 0.8f, 0.0f, 1.0f), details);
             ImGui.EndGroup();
             ImGui.EndGroup();
