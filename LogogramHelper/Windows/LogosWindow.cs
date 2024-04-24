@@ -21,7 +21,7 @@ namespace LogogramHelper.Windows
         private IDalamudTextureWrap Texture { get; set; } = null!;
         private IDictionary<uint, IDalamudTextureWrap> RoleTextures { get; set; } = null!;
         public LogosWindow(Plugin plugin) : base(
-        "Logos Details", ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse | ImGuiWindowFlags.NoResize | ImGuiWindowFlags.AlwaysAutoResize)
+        "文理技能详情", ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse | ImGuiWindowFlags.NoResize | ImGuiWindowFlags.AlwaysAutoResize)
         {
             this.Plugin = plugin;
             this.Action = plugin.LogosActions[0];
@@ -89,7 +89,7 @@ namespace LogogramHelper.Windows
             ImGui.Spacing();
             ImGui.Text($"{Action.Description}");
             ImGui.Spacing();
-            ImGui.Text("Combinations:");
+            ImGui.Text("合成方式:");
             ImGui.BeginChild($"combinations{Action.Name}", new Vector2(540.0f * fontScaling, (ImGui.GetFontSize() + 4) * Action.Recipes.Count), false, ImGuiWindowFlags.NoScrollbar);
             ImGui.Columns(2, "combinations", false);
             ImGui.SetColumnWidth(0, 40f);
