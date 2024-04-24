@@ -18,7 +18,7 @@ public class MainWindow : Window, IDisposable
     private List<LogosAction> LogosActions { get; }
 
     public MainWindow(Plugin plugin) : base(
-        "Logos Actions", ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse | ImGuiWindowFlags.AlwaysAutoResize)
+        "文理技能", ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse | ImGuiWindowFlags.AlwaysAutoResize)
     {
         this.Plugin = plugin;
         this.LogosActions = plugin.LogosActions;
@@ -36,7 +36,7 @@ public class MainWindow : Window, IDisposable
         var fontScaling = ImGui.GetFontSize() / 17;
 
         ImGui.PushItemWidth(400);
-        ImGui.InputTextWithHint("", "Filter Logos Actions...", ref filter, 50, ImGuiInputTextFlags.AutoSelectAll);
+        ImGui.InputTextWithHint("", "搜索文理技能...", ref filter, 50, ImGuiInputTextFlags.AutoSelectAll);
         ImGui.PopItemWidth();
 
         ImGui.SameLine();
